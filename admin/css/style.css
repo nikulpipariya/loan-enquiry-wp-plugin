@@ -1,0 +1,683 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
+
+/* font-family: 'Poppins', sans-serif; */
+
+.notice {
+    display: none !important;
+}
+
+.widefat * {
+    word-wrap: unset;
+}
+
+table {
+    border: none !important;
+}
+
+.row_id {
+    text-align: center;
+}
+
+.add_bank {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.wrap.shortcode {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.wrap.shortcode label {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.wrap.shortcode td {
+    text-align: start !important;
+}
+
+.wrap.shortcode input {
+    font-size: 1.5em;
+}
+
+.flex-collum-3 {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-block: 20px;
+    flex: 1 0 73%;
+}
+
+.flex-collum-1-4 {
+    margin-block: 20px;
+    flex: 1 0 25%;
+}
+
+.flex-collum-3 div {
+    flex: 1 0 20%;
+}
+
+.flex-container-end {
+    display: flex;
+    justify-content: end;
+}
+
+.full-w {
+    width: 100%;
+}
+
+.add_bank label {
+    font-size: 1rem;
+    width: 100%;
+}
+
+.add_bank span.form_button {
+    display: flex;
+    gap: 1em
+}
+
+
+/* 
+.add_bank div {
+    flex: 1 1 22%;
+} */
+
+select#states {
+    display: none !important;
+    width: 100%;
+    /* height: 86% !important; */
+    line-height: 2.65 !important;
+    min-height: 30px;
+    max-width: unset !important;
+    padding: 0 !important;
+}
+
+select option {
+    padding-block: 3px !important;
+}
+
+.multiselect-container {
+    display: block !important;
+}
+
+.multiselect.dropdown-toggle {
+    display: none;
+}
+
+.multiselect-native-select .btn-group {
+    width: 100% !important;
+}
+
+.dropdown-menu {
+    position: relative !important;
+    max-height: 218px;
+    display: block;
+    overflow-y: scroll;
+    width: 100% !important;
+    box-shadow: none !important;
+}
+
+.dropdown-menu::-webkit-scrollbar {
+    width: 5px;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+    background: #a594708c;
+    border-radius: 14px 0px 0px 14px;
+}
+
+.dropdown-menu input {
+    width: unset !important;
+}
+
+.dropdown-menu button {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+}
+
+.dropdown-menu .form-check {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.dropdown-menu .form-check input {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+    outline: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #c9c9c952 !important;
+}
+
+.dropdown-menu .form-check label {
+    text-align: start;
+    padding-left: 10px;
+}
+
+select option:disabled {
+    background-color: antiquewhite;
+}
+
+@media(max-width:900px) {
+    .add_bank div {
+        flex: 1 1 100%;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bank_container {
+    place-items: center;
+    place-content: center;
+    width: 95%;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.bank_container.full {
+    width: 100%;
+}
+
+.grid {
+    display: grid !important;
+}
+
+.grid.center {
+    place-content: center;
+    place-items: center;
+}
+
+.bank_container.top {
+    place-items: flex-start;
+    place-content: flex-start;
+    margin-top: 5em;
+}
+
+.bank_container form input {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    padding: 5px;
+}
+
+.bank_container form .input.submit {
+    min-width: 250px;
+    max-width: 250px;
+    border: none;
+    padding: 4px;
+    font-size: 1.3rem;
+}
+
+.bank_container form .button {
+    min-width: 100px;
+    max-width: 250px;
+    border: none;
+    font-size: 13px !important;
+    line-height: unset;
+    min-height: 25px;
+}
+
+button a {
+    color: white;
+    display: block;
+    text-decoration: none;
+}
+
+button a:hover {
+    color: white;
+}
+
+.bulkactions {
+    padding-block: 15px;
+}
+
+.bulkactions :is(input,
+select) {
+    height: 35px;
+}
+
+.widefat tfoot td.check-column,
+.widefat thead td.check-column {
+    padding-top: 0px;
+    vertical-align: middle;
+}
+
+.widefat .check-column {
+    width: 3.5rem;
+}
+
+table {
+    padding: 15px 25px 15px 25px;
+}
+
+table :is(tr,
+td,
+th) {
+    padding-block: 10px !important;
+    background-color: transparent !important;
+    text-align: center !important;
+}
+
+thead :is(th,
+td) {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 1px !important;
+    color: black;
+}
+
+tbody :is(th,
+td) {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem !important;
+    font-weight: 400 !important;
+    letter-spacing: 1px !important;
+    color: rgb(59, 55, 51) !important;
+    vertical-align: middle !important;
+    padding: 5px !important;
+}
+
+td.email,
+td.state {
+    word-break: break-all;
+}
+
+.column-title {
+    text-align: center !important;
+}
+
+.bank_update_form {
+    overflow: scroll;
+    padding: 20px;
+}
+
+.bank_update_form form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.bank_update_form form input {
+    padding: 3px 10px;
+}
+
+.bank_update_form label {
+    font-size: 1.2rem;
+}
+
+#update_bank span.form_button {
+    align-items: center;
+    display: flex;
+    padding-top: 1.1em;
+}
+
+
+/* .bank_update_form form span {
+    display: block;
+    width: 100%;
+} */
+
+.logo {
+    background-size: contain;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+
+.change_record {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.change_record button {
+    margin: 0px !important;
+    padding: 0px !important;
+    min-height: unset !important;
+    background: transparent !important;
+    color: black !important;
+    width: 100%;
+    line-height: normal !important;
+    flex: 1 0 47%;
+}
+
+.change_record span {
+    flex: 1 0 100%;
+}
+
+.bank_details {
+    font-size: 1.1rem;
+    border: 1px solid #e1194b;
+    color: black;
+    border-radius: 3px;
+}
+
+.bank_details {
+    cursor: pointer;
+}
+
+.bank_details .dashicons {
+    font-size: 1.3rem;
+}
+
+#bank_edit_form {
+    display: none;
+    width: 90vw;
+    position: fixed;
+    left: 0;
+    right: 0;
+    background: white;
+    z-index: 99999;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 20px 25px;
+    border-radius: 10px;
+}
+
+.overlay {
+    z-index: 9999;
+    background: #00000091;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    position: fixed;
+    inset: 0 0 auto;
+}
+
+.close {
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    border: 1px solid #2271b1;
+    background-color: #2271b1;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dashicons {
+    line-height: unset;
+}
+
+.close .dashicons {
+    color: white !important;
+}
+
+div.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+div.row div {
+    flex: 1 1 49%;
+}
+
+div.row .textarea_label {
+    display: block;
+    font-weight: bolder;
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 0;
+    line-height: 40px;
+    border: solid #ddd;
+    border-width: 1px 1px 0px 1px;
+}
+
+.row::before {
+    display: none !important;
+}
+
+.bank_update_form div.row {
+    flex: 0 1 auto !important;
+}
+
+.logo_image {
+    display: block;
+}
+
+.logo_image div {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.logo_image img {
+    object-fit: contain;
+}
+
+.row {
+    margin: 0 !important;
+}
+
+div.row label {
+    margin-bottom: 0;
+}
+
+.panel-default {
+    border-color: #ddd !important;
+    border-width: 0px 1px 1px 1px !important;
+}
+
+.other_details {
+    display: none;
+    overflow: hidden;
+}
+
+.other_details td {
+    padding: 30px;
+    text-align: start !important;
+    vertical-align: top !important;
+    background-color: #fefafb !important;
+    padding: 20px !important;
+}
+
+.other_details p {
+    font-size: 1.2rem !important;
+}
+
+.other_details p:nth-child(1) {
+    font-size: 1.3rem;
+    font-weight: 500;
+    border-bottom: 1px solid #ddd;
+    letter-spacing: normal;
+}
+
+.filter {
+    margin: 0 !important;
+}
+
+#filter_user {
+    display: flex;
+    align-items: end;
+    width: auto;
+    gap: 1.5em;
+}
+
+#filter_user select {
+    font-size: 13px !important;
+    line-height: unset;
+    min-height: 25px;
+}
+
+#filter_user label {
+    font-weight: 400;
+    font-size: 13px !important;
+}
+
+#filter_user .filter_input {
+    display: flex;
+    flex-direction: column;
+}
+
+#filter_user button {
+    border: 1px solid #2271b1 !important;
+}
+
+#filter_inquiry {
+    display: flex;
+    align-items: end;
+    width: auto;
+    gap: 1.5em;
+}
+
+#filter_inquiry select {
+    font-size: 13px !important;
+    line-height: unset;
+    min-height: 25px;
+}
+
+#filter_inquiry label {
+    font-weight: 400;
+    font-size: 13px !important;
+}
+
+#filter_inquiry .filter_input {
+    display: flex;
+    flex-direction: column;
+}
+
+#filter_inquiry button {
+    border: 1px solid #2271b1 !important;
+}
+
+.footer {
+    display: flex;
+    justify-content: end;
+    padding-block: 2em;
+}
+
+table#userList {
+    padding: 0px 10px 10px 10px;
+}
+
+#userList_length select {
+    padding-inline: 15px !important;
+}
+
+#userList_length {
+    float: inline-end;
+}
+
+#userList_filter {
+    padding-right: 2em;
+}
+
+#userList_length select {
+    line-height: unset;
+}
+
+#userList_filter input {
+    min-width: 245px;
+    line-height: unset;
+}
+
+#userList_info {
+    margin-top: 2em;
+}
+
+#userList_paginate {
+    margin-top: 2.5em;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.active.start-date {
+    background-color: #e1194b !important;
+    color: white !important;
+    font-weight: 800 !important;
+}
+
+.in-range.available {
+    background-color: #e1194b62 !important;
+}
+
+.active.end-date {
+    background-color: #e1194b !important;
+    color: white !important;
+    font-weight: 800 !important;
+}
+
+.containe_header {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    width: 100%;
+    padding-block: 1em;
+    gap: 15px;
+}
+
+.containe_header #reportrange {
+    flex: 0 1 auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 !important;
+}
+
+.export_user {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.export_user button {
+    font-size: 13px !important;
+    line-height: unset !important;
+    min-height: 25px !important;
+}
+
+#reportrange {
+    border: none !important;
+    width: auto !important;
+}
+
+#reportrange .fa-calendar {
+    font-size: 12px !important;
+}
+
+#reportrange .fa-caret-down {
+    font-size: 17px !important;
+}
+
+.button.action.downloadData {
+    display: none;
+}
+
+.dataTables_info {
+    display: none !important;
+}
+
+.dataTables_wrapper .dataTables_length select {
+    padding: 0px 25px 0px 5px !important;
+    text-align: left !important;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    padding: 0px !important;
+}

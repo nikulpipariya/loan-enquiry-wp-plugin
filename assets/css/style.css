@@ -1,0 +1,924 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+#otpInput {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.multistep_form * {
+    margin: 0;
+}
+
+.multistep_form {
+    background-color: white;
+    width: 100%;
+    height: auto;
+    padding: 25px;
+    border-radius: 15px 15px 0 0;
+    border: 1px solid #eb4770;
+    border-bottom-width: 5px;
+}
+
+@media(max-width:768px) {
+    .multistep_form {
+        width: 100%;
+    }
+}
+
+form :is(button,
+input[type="submit"]) {
+    cursor: pointer;
+}
+
+.flex-container {
+    display: flex;
+    gap: 10px;
+}
+
+@media(max-width:768px) {
+    .flex-container {
+        display: grid;
+    }
+    .flex-container div {
+        margin-top: 15px;
+    }
+}
+
+.flex-container.space-between {
+    display: flex;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+.flex-container.phone input {
+    flex: 1 1 auto;
+}
+
+.flex-container.phone button {
+    flex: 0 1 25%;
+    font-size: 0.8rem;
+}
+
+@media(max-width:768px) {
+    .flex-container.phone button {
+        flex: 0 0 35%;
+        font-size: 0.7rem;
+        padding: 5px;
+    }
+}
+
+
+/* .flex-container .submit {
+    flex: 1 0 49%;
+} */
+
+.flex-container div {
+    flex: 1;
+}
+
+form .form_row {
+    padding-block: 10px;
+    position: relative;
+    margin: 0;
+}
+
+form .form_row label {
+    display: block;
+}
+
+form .form_row input {
+    display: block;
+    width: 100%;
+}
+
+form.bank_form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-family: 'Poppins', sans-serif;
+    margin: auto;
+    display: none;
+    overflow: auto;
+}
+
+form.bank_form.active {
+    opacity: 1;
+    display: block;
+}
+
+form.bank_form label {
+    font-size: 1rem;
+    font-weight: 400;
+    padding-bottom: 5px;
+}
+
+@media(max-width:768px) {
+    form.bank_form label {
+        font-size: 0.8rem;
+    }
+    form.bank_form.active {
+        height: 100% !important;
+    }
+}
+
+.radio_group label {
+    padding: 0 !important;
+    margin: 0 !important;
+    padding-left: 10px !important;
+    font-size: 0.9rem !important;
+    font-weight: 400 !important;
+}
+
+form.bank_form .astrick {
+    color: red;
+}
+
+.form.bank_form .half {
+    display: flex;
+    gap: 15px;
+}
+
+form.bank_form :is(input,
+select,
+button):focus {
+    outline: 0;
+}
+
+form.bank_form :is(input,
+select,
+button) {
+    padding: 5px 10px;
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.form.button {
+    padding-block: 5px;
+    font-size: 1.2rem;
+    color: black;
+}
+
+#get_otp {
+    background-color: #e1194b;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+
+#get_otp:hover {
+    background-color: white;
+    color: #e1194b;
+    border: 1px solid #e1194b;
+}
+
+form.bank_form .submit {
+    background-color: #e1194b;
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 40px;
+    font-size: 1.4rem;
+    padding-block: 10px;
+    padding-top: 10px;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+
+@media(max-width:768px) {
+    form.bank_form .submit {
+        font-size: 0.8rem;
+    }
+}
+
+form.bank_form .submit:hover {
+    background-color: transparent;
+    border: 2px solid #e1194b;
+    color: #e1194b;
+    text-decoration: none;
+}
+
+:is(input.submit.navigation) {
+    background-color: transparent;
+    border: 2px solid #e1194b;
+    color: #e1194b !important;
+    text-decoration: none;
+}
+
+input.submit.navigation:hover {
+    background-color: #e1194b;
+    border: 2px solid #e1194b;
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+input.submit.navigation.fill {
+    background-color: #e1194b;
+    border: 2px solid #e1194b;
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+input.submit.navigation.fill:hover {
+    background-color: transparent;
+    border: 2px solid #e1194b;
+    color: #e1194b !important;
+    text-decoration: none;
+}
+
+.form.button:hover {
+    color: rgb(0, 0, 0);
+    background-color: bisque;
+    text-decoration: none;
+}
+
+.form_step {
+    border-radius: 50%;
+    display: block;
+    flex: 1 1 auto;
+    position: relative;
+}
+
+.form-nav {
+    padding-bottom: 2em;
+}
+
+.form_step:nth-last-child(1) {
+    flex: 0;
+}
+
+.form_step span::after {
+    content: '';
+    border: 2px solid #eb4770;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.form_step span {
+    color: #000;
+    height: 40px;
+    width: 40px;
+    display: grid;
+    place-content: center;
+    border: 4px solid #d9d9d9;
+    border-radius: 50%;
+    background-color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    position: relative;
+    z-index: 10;
+}
+
+.form_step.active span {
+    color: antiquewhite;
+    background-color: #eb4770;
+}
+
+.form_step:not(:nth-last-child(1)):before {
+    content: '';
+    width: 105%;
+    min-height: 4px;
+    display: block;
+    position: absolute;
+    background-color: #d9d9d9;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    overflow: hidden;
+}
+
+.bank_form_popup.active {
+    position: fixed;
+    z-index: 99999;
+    inset: 0 0 auto;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    background-color: rgb(0, 0, 0, 0.1);
+}
+
+.bank_form_popup .popup_content {
+    transform: scale(0);
+    display: none;
+    font-size: 1.3rem;
+}
+
+.bank_form_popup.active .popup_content {
+    display: block;
+    transform: scale(1);
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#step4.error .form_row {
+    opacity: 0;
+}
+
+#step4 .error_msg {
+    display: none;
+}
+
+#step4.error .error_msg {
+    position: absolute;
+    inset: 0 0 auto;
+    height: 85%;
+    display: grid;
+    place-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.popup_content {
+    max-width: 600px;
+    padding: 2rem;
+    border-radius: 10px;
+    color: black;
+    background-color: rgb(255, 255, 255);
+}
+
+.popup_content {
+    font-size: 2rem;
+}
+
+.popup_content button {
+    margin-top: 2rem;
+    padding: 0.2rem 3rem;
+    background-color: #e1194b;
+    color: white;
+    border: none;
+    padding: 8px 40px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    margin: 0 !important;
+    width: auto !important;
+}
+
+.radio_group {
+    display: flex;
+    gap: 5px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-block: 10px;
+    /* flex: 0 1 50%; */
+}
+
+.radio_group div {
+    flex: 1 0 auto;
+    display: flex;
+    padding-block: 5px;
+}
+
+@media(max-width:768px) {
+    .radio_group div {
+        flex: 1 1 auto;
+    }
+}
+
+.output .heading {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.output :is(tr,
+td) {
+    border: none !important;
+    background-color: transparent !important;
+    font-size: 1rem;
+    font-weight: 500;
+    padding-block: 10px;
+    margin: 0;
+}
+
+.multistep_form {
+    position: relative;
+}
+
+.multistep_form .overlay {
+    position: absolute;
+    z-index: 99;
+    inset: 0 0 auto;
+    border-radius: 15px 15px 0px 0px;
+    height: 100%;
+    width: 100%;
+    background: rgb(0, 0, 0, 0.5);
+}
+
+.loader {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader-18 {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 4px solid #FFF;
+    border-right: 4px solid transparent;
+    -webkit-animation: rotation 1s linear infinite;
+    animation: rotation 1s linear infinite;
+}
+
+.loader-18:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border-bottom: 4px solid #e1194b;
+    border-left: 4px solid transparent;
+}
+
+@-webkit-keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.error.tooltip {
+    background-color: rgb(251, 0, 0);
+}
+
+.tooltip {
+    display: block;
+    width: auto;
+    position: absolute;
+    left: auto;
+    z-index: 111;
+    /* bottom: -25px; */
+    top: auto;
+    opacity: 0;
+    background: rgb(225, 25, 75, 1);
+    padding: 0px 30px 5px 10px;
+    margin-top: 6px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    border: 1px solid white;
+}
+
+.tooltip::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid rgb(225, 25, 75, 1);
+    margin-left: 0px;
+    margin-top: -6px;
+}
+
+.tooltip-text {
+    width: 50%;
+    text-align: left;
+    color: white;
+    font-weight: 600;
+}
+
+.bank_list {
+    display: none;
+    overflow: hidden;
+}
+
+.banks {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-block: 1.5em;
+}
+
+.bankListHeader {
+    margin-top: 1em;
+    display: flex;
+    gap: 10px;
+}
+
+.bankListFooter .bank_action {
+    align-items: flex-start;
+}
+
+.bankListFooter .bank_action button {
+    padding: 2px 60px;
+}
+
+.banks .bank_item {
+    flex: 1;
+}
+
+.bank_list .bank_item {
+    border-radius: 10px;
+    padding: 1em;
+    background-color: #fefafb;
+    border: 1px solid #d9d9d9;
+}
+
+.bank_item .itemData {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bank_item .itemData div {
+    text-align: center !important;
+}
+
+.itemData div {
+    flex: 1 0 auto;
+}
+
+.bank_item .otherDetails {
+    display: none;
+    transform: all 1s ease;
+    overflow: hidden;
+}
+
+.otherDetails.active {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    overflow: hidden;
+    transform: all 1s ease;
+}
+
+.bank_item .otherDetails.active {
+    height: auto;
+    transform: all 1s ease;
+    color: #34495e !important;
+    border-top: 2px solid #e9e7e7;
+    margin-top: 1em;
+}
+
+.otherDetails div {
+    flex: 1 0 25%;
+    padding: 1em;
+}
+
+.otherDetails div p {
+    padding-top: 1em;
+}
+
+.otherDetails .title {
+    font-weight: 400 !important;
+    font-size: 0.9rem;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.bank_item p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem !important;
+    font-weight: 400 !important;
+}
+
+.bank_item .logo img {
+    max-width: 50px;
+}
+
+.bank_item .title {
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+    color: #4f4f4f !important;
+}
+
+.entry-content .bank_item p {
+    padding: 0 !important;
+}
+
+.bank_item .subtitle {
+    font-size: 0.8rem !important;
+    color: #606060;
+}
+
+.bank_action {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.bank_action button {
+    padding: 0;
+    font-size: 1rme;
+}
+
+.bankApply {
+    padding: 3px 0px !important;
+    background-color: #e1194b;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 20px !important;
+    min-width: 125px;
+    max-width: 125px;
+    cursor: pointer;
+}
+
+.applied {
+    padding: 3px 0px !important;
+    background-color: #ea728f;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 20px !important;
+    min-width: 125px;
+    max-width: 125px;
+    pointer-events: none;
+}
+
+#applySelectedBanks {
+    padding: 3px;
+    background-color: #e1194b;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 20px !important;
+    min-width: 125px;
+    max-width: 125px;
+    cursor: pointer;
+}
+
+.toogleDetails {
+    padding: 3px;
+    background-color: #e1194b;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 20px !important;
+    min-width: 125px;
+    max-width: 125px;
+    cursor: pointer;
+}
+
+.repeat button {
+    display: none;
+    background-color: #e1194b;
+    margin-top: 10px;
+    min-width: 200px;
+    border: none;
+    border-radius: 40px;
+    font-size: 1.4rem;
+    padding-block: 10px;
+    padding-top: 10px;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.repeat.active button {
+    display: block;
+}
+
+
+/* Calculator */
+
+.bank_calculator * {
+    padding: 0;
+    margin: 0;
+}
+
+.bank_calculator p {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.bank_calculator {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    padding-block: 4em;
+}
+
+.bank_calculator .left_container {
+    width: 50%;
+    padding-right: 2em;
+}
+
+.bank_calculator .right_container {
+    width: 50%;
+    padding: 2em;
+}
+
+.bank_calculator .cal_row {
+    padding-bottom: 1em;
+}
+
+.bank_calculator .cal_row input {
+    margin-block: 2.5em;
+}
+
+.bank_calculator p.heading {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -1px;
+    word-spacing: 5px;
+    color: #18191f;
+    margin-bottom: 1.5em !important;
+}
+
+.bank_calculator .tag {
+    font-weight: 500;
+    color: #888888;
+    font-size: 1rem;
+}
+
+.bank_calculator .tagTitle {
+    font-weight: 600;
+    color: #444444;
+    font-size: 1.7rem;
+}
+
+input[type='range'] {
+    width: 100%;
+}
+
+.range {
+    margin: 30px 0 20px 0;
+    -webkit-appearance: none;
+    background-color: #f5f6f8;
+    height: 3px;
+    width: 100%;
+    margin: 10px auto;
+}
+
+.range:focus {
+    outline: none;
+}
+
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 35px;
+    height: 35px;
+    background: #ffffff;
+    border: 2px solid #e1194b;
+    border-radius: 50%;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    box-shadow: 1px 3px 5px #aaa;
+}
+
+.cal_output {
+    margin: auto;
+    padding: 2em;
+    box-shadow: -1px 5px 20px #ffdce5;
+    border-radius: 24px;
+}
+
+.cal_output .cal_row {
+    padding-block: 0.8em !important;
+}
+
+.cal_output .footer.cal_row {
+    margin-bottom: -3.5em;
+    text-align: center;
+}
+
+.cal_output .footer button {
+    background-color: #e1194b;
+    margin-top: 10px;
+    width: 65%;
+    border-radius: 40px;
+    font-size: 1.4rem;
+    padding-block: 13px;
+    padding-top: 13px;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    border: none !important;
+    cursor: pointer;
+}
+
+.cal_output .footer button:hover {
+    border: 1px solid #e1194b !important;
+    background: white;
+    color: #e1194b;
+}
+
+.currency {
+    display: inline-block;
+    font-size: 1.6rem;
+    font-family: 'roboto', sans-serif;
+}
+
+.bank_calculator .label {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.bank_calculator .label i {
+    border: 2px solid #e1194b;
+    padding: 2px 4px;
+    font-size: 11px;
+    border-radius: 3px;
+    font-weight: 600;
+    color: #e1194b;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+@media(max-width:768px) {
+    .bank_calculator p.heading {
+        margin-bottom: 1em !important;
+    }
+    .entry-content p {
+        line-height: 1.6rem !important;
+    }
+    .range::-webkit-slider-thumb {
+        width: 15px;
+        height: 15px;
+        box-shadow: 1px 2px 3px #aaa;
+    }
+    .bank_calculator .tag {
+        font-size: 0.8rem;
+    }
+    .bank_calculator .label {
+        line-height: 2.5rem;
+    }
+    .bank_calculator .cal_row input {
+        margin-block: 1.5em;
+    }
+    .bank_calculator .tagTitle {
+        font-size: 1.3rem;
+    }
+    .bank_calculator .cal_row {
+        padding-bottom: 0;
+    }
+    .bank_calculator {
+        display: block;
+        padding-block: 2em;
+    }
+    .bank_calculator .left_container {
+        width: 100%;
+        padding-right: 1em;
+    }
+    .bank_calculator .right_container {
+        width: 100%;
+        padding: 1em;
+    }
+}
+
+.cal_output .tag {
+    padding-bottom: 0.5em !important;
+}
+
+.star {
+    color: #e1194b;
+    font-size: 1.2rem;
+}
+
+.row_items {
+    display: flex;
+}
+
+@media(max-width:768px) {
+    .bank_item .itemData {
+        gap: 1.5em;
+    }
+    .otherDetails.active {
+        display: block;
+    }
+}
